@@ -180,3 +180,70 @@ cd -      # back to web
 | `\|` | Pipe: send one command's output into the next command |
 | `>` | Write output to a file (overwrite) |
 | `>>` | Append output to a file |
+
+---
+
+## Quick knowledge check
+
+<details>
+<summary><strong>1.</strong> You're about to delete some files and want to be sure which folder you're standing in. Which command?</summary>
+
+&nbsp;
+
+**`pwd`** &nbsp;·&nbsp; `ls` &nbsp;·&nbsp; `cd ..`
+
+**Answer: `pwd`** — prints the full path of your current directory. Check it before anything risky.
+</details>
+
+<details>
+<summary><strong>2.</strong> You need to see hidden files like <code>.env</code> with human-readable sizes. Which command?</summary>
+
+&nbsp;
+
+`ls` &nbsp;·&nbsp; **`ls -lah`** &nbsp;·&nbsp; `du -sh`
+
+**Answer: `ls -lah`** — `-a` shows hidden files, `-l` the long view, `-h` human-readable sizes.
+</details>
+
+<details>
+<summary><strong>3.</strong> Your app on a server just crashed and you suspect the disk is full. What do you run first?</summary>
+
+&nbsp;
+
+`du -sh *` &nbsp;·&nbsp; **`df -h`** &nbsp;·&nbsp; `find / -size +100M`
+
+**Answer: `df -h`** — shows how full each disk is (used vs. free). `du` then finds *what* is big.
+</details>
+
+<details>
+<summary><strong>4.</strong> You want to add a line to a file <em>without</em> erasing what's already in it. Which operator?</summary>
+
+&nbsp;
+
+`>` &nbsp;·&nbsp; **`>>`** &nbsp;·&nbsp; `|`
+
+**Answer: `>>`** — appends to the end. `>` would overwrite the whole file.
+</details>
+
+---
+
+## Get your score
+
+The check above is for self-testing. For a graded version that records your result and emails it
+to you, take the Day 1 check — a few questions, about a minute:
+
+**[Take the Day 1 check →]()**
+
+<!-- Replace REPLACE_WITH_DAY_1_FORM_LINK with your Google Form (quiz mode) share link. -->
+
+It also signs you up to get a ping when the next day is published.
+
+---
+
+## Key takeaway
+
+Before you fix, deploy, or delete anything, you orient yourself: *where am I* (`pwd`),
+*what's here* (`ls -lah`), *how much space* (`du`, `df`). That habit is what stops you running
+a destructive command in the wrong place.
+
+---
